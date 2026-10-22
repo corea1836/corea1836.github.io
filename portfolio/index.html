@@ -78,6 +78,9 @@
   .shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; margin: 8px 0 0; align-items: start; }
   figure.shot { margin: 0; }
   figure.shot img { display: block; max-width: 100%; height: auto; margin: 0 auto; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); }
+  figure.clip { margin: 0; }
+  figure.clip video { display: block; width: 100%; height: auto; border: 1px solid var(--border); border-radius: 10px; background: #000; }
+  figure.clip figcaption { margin-top: 6px; color: var(--muted); font-size: 14px; text-align: center; }
 
   article.item {
     background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
@@ -302,6 +305,23 @@
       </ul></dd></div>
     </dl>
   </article>
+</section>
+
+<!-- ───────────────────────── T1 영상 (테스트) ───────────────────────── -->
+<section class="project">
+  <h2 id="t1-video-test">🎮 T1 영상 (테스트)</h2>
+
+  <h3>레이턴시 150ms: 클라이언트 예측</h3>
+  <div class="shots">
+    <figure class="clip"><video src="video/t1-latency150-predict-off.mp4" autoplay muted loop playsinline controls></video><figcaption>미적용</figcaption></figure>
+    <figure class="clip"><video src="video/t1-latency150-predict-on.mp4" autoplay muted loop playsinline controls></video><figcaption>적용</figcaption></figure>
+  </div>
+
+  <h3>AOI</h3>
+  <div class="shots">
+    <figure class="clip"><video src="video/t1-aoi-off.mp4" autoplay muted loop playsinline controls></video><figcaption>미적용</figcaption></figure>
+    <figure class="clip"><video src="video/t1-aoi-on.mp4" autoplay muted loop playsinline controls></video><figcaption>적용</figcaption></figure>
+  </div>
 </section>
 
 <footer>
